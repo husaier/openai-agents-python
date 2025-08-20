@@ -8,6 +8,7 @@ from . import _config
 from .agent import Agent, AgentBase, ToolsToFinalOutputFunction, ToolsToFinalOutputResult
 from .agent_output import AgentOutputSchema, AgentOutputSchemaBase
 from .computer import AsyncComputer, Button, Computer, Environment
+from .reflection_agent import create_reflection_agent
 from .exceptions import (
     AgentsException,
     InputGuardrailTripwireTriggered,
@@ -166,6 +167,7 @@ __all__ = [
     "ToolsToFinalOutputResult",
     "Runner",
     "run_demo_loop",
+    "create_reflection_agent",
     "Model",
     "ModelProvider",
     "ModelTracing",
