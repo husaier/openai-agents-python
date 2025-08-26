@@ -37,6 +37,15 @@ For example, you could use an LLM to generate an outline for a story, and then u
 
 See the [`llm_as_a_judge.py`](./llm_as_a_judge.py) file for an example of this.
 
+## Self-reflection and fact checking
+
+Another way to improve response quality is to pair a researcher agent with a critic
+agent. The researcher uses tools such as web search to answer the user's question.
+The critic inspects the answer for unsupported claims and provides feedback. The
+researcher then revises the answer until the critic is satisfied.
+
+See the [`fact_checking.py`](./fact_checking.py) file for an example of this.
+
 ## Parallelization
 
 Running multiple agents in parallel is a common pattern. This can be useful for both latency (e.g. if you have multiple steps that don't depend on each other) and also for other reasons e.g. generating multiple responses and picking the best one.
