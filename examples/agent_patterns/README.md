@@ -37,6 +37,12 @@ For example, you could use an LLM to generate an outline for a story, and then u
 
 See the [`llm_as_a_judge.py`](./llm_as_a_judge.py) file for an example of this.
 
+## Fact-checking workflows
+
+For high-stakes deployments you may need a dedicated agent that inspects another model's answer, performs live web searches, and
+returns a structured JSON report that can be programmatically reviewed. The [`fact_check_agent.py`](./fact_check_agent.py)
+example shows how to combine a strict output schema with the hosted web search tool to build a reusable fact-checking template.
+
 ## Parallelization
 
 Running multiple agents in parallel is a common pattern. This can be useful for both latency (e.g. if you have multiple steps that don't depend on each other) and also for other reasons e.g. generating multiple responses and picking the best one.
