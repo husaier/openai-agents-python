@@ -9,6 +9,7 @@ from .agent import Agent, AgentBase, ToolsToFinalOutputFunction, ToolsToFinalOut
 from .agent_output import AgentOutputSchema, AgentOutputSchemaBase
 from .computer import AsyncComputer, Button, Computer, Environment
 from .reflection_agent import create_reflection_agent
+from .fact_checking_agent import create_fact_checking_agent
 from .exceptions import (
     AgentsException,
     InputGuardrailTripwireTriggered,
@@ -168,6 +169,7 @@ __all__ = [
     "Runner",
     "run_demo_loop",
     "create_reflection_agent",
+    "create_fact_checking_agent",
     "Model",
     "ModelProvider",
     "ModelTracing",
